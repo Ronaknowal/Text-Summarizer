@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TEXT-SUMMARIZATION</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.footer {
+   position:relative;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   padding:8px;
+   background-color: #D3E0DC;
+   color: white;
+   text-align: center;
+}
+textarea
+{
+color:black;
+font-size:17px;
+font-weight:600;
+}
+.button {
+  background-color: #FBEEAC; 
+  border: none;
+  color: white;
+  padding: 6px 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight:600;
+}
+.button:hover {
+  background-color: #AEE1E1; 
+  border: none;
+  color: white;
+  padding: 6px 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+body, html, .body{
+  height: 100%;
+  width: 100%;
+}
+body{
+  background:
+    radial-gradient(closest-corner, rgba(16, 47, 70, 0) 60%, rgba(16, 47, 70, 0.26)),
+    linear-gradient(108deg, #FCD1D1, #FCD1D1 90%);
+    font-family: "Times New Roman", Times, serif;
+}
+
+.body{
+  display: table;
+}
+
+.wrapper{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.text{
+  font-size: 20px;
+}
+</style>
+</head>
+<body>
+<div class="body" ng-app="myApp">
+    <div class="wrapper" ng-controller="MyCtrl">
+	<h1 style="color:#863A6F;">Summarize Text</h1>
+<form name="form" action="http://127.0.0.1:5000/output"  method="POST">
+  <table>
+    <tr>
+        <td><p class="text" style="color:#863A6F;">Text:</p></td>
+        <td ><textarea cols="100" rows="25" name="textarea" id="textarea"></textarea></td>
+    </tr>
+        <tr>
+            <td><p class="text" style="color:#863A6F;">Number of Sentences:</p></td>
+            <td><input type="number" name="num_s" id="num_s"></td>
+        </tr>
+        <tr>
+            <td><p class="text" style="color:#863A6F;">Check to rearrange in reverse order of importance:</p></td>
+            <td><input type="checkbox" autocomplete="off" name="reverse" id="reverse" value="True"></td>
+
+        </tr>
+</table>
+<br>
+	<div class="button">
+	<input type="submit" class="button" value="SUBMIT">
+	</div>
+</form>
+  </div>
+</div>
+<br><br>
+<div class="footer">
+  <footer style="color:black;font-weight:600;">&copy; Copyright 2023</footer>
+</div>
+<body>
+</html>
