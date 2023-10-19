@@ -30,3 +30,6 @@ nltk.download('sent_tokenize')
 ```sh
 python __init__.py
 ```
+### Quick Demo of the application:
+
+![DEMO-OUTPUT](Demo.gif)
